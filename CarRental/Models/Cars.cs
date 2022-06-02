@@ -27,9 +27,9 @@ namespace CarRental.Models
         public int YearOfIssue { get; set; }
         public string Image { get; set; }
         public string ImageAbove { get; set; }
-        public Nullable<int> IdCarcassType { get; set; }
-        public Nullable<int> IdColor { get; set; }
-        public Nullable<int> IdModel { get; set; }
+        public int IdCarcassType { get; set; }
+        public int IdColor { get; set; }
+        public int IdModel { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BeetwenCarsClients> BeetwenCarsClients { get; set; }

@@ -1,4 +1,5 @@
 ﻿using CarRental.Models;
+using CarRental.ViewModel;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -167,17 +168,10 @@ namespace CarRental.Views
 
         private void AddModelButtonClick(object sender, RoutedEventArgs e)
         {
-            currentCars.IdModel = Convert.ToInt32(NewModelComboBox.SelectedValue);
-            currentCars.Price = Convert.ToDouble(PriceTextBox.Text);
-            currentCars.Acceleration = Convert.ToDouble(AccelerationTextBox.Text);
-            currentCars.MaxSpeed = Convert.ToInt32(MaxSpeedTextBox.Text);
-            currentCars.YearOfIssue = Convert.ToInt32(YearOfIssueTextBox.Text);
-            currentCars.Image = ImageAutomobilePath;
-            currentCars.ImageAbove = ImageAboveAutomobilePath;
-            currentCars.IdCarcassType = Convert.ToInt32(CarcassComboBox.SelectedValue);
-            currentCars.IdColor = Convert.ToInt32(ColorComboBox.SelectedValue);
-
-            db.context.SaveChanges();
+            CarsViewModel obj = new CarsViewModel();
+            obj.AddСar(Convert.ToDouble(PriceTextBox.Text), Convert.ToDouble(AccelerationTextBox.Text), Convert.ToInt32(MaxSpeedTextBox.Text), 
+                Convert.ToInt32(YearOfIssueTextBox.Text), ImageAutomobilePath, ImageAboveAutomobilePath, Convert.ToInt32(CarcassComboBox.SelectedValue), 
+                Convert.ToInt32(ColorComboBox.SelectedValue), Convert.ToInt32(NewModelComboBox.SelectedValue));
 
             NavigationService.Navigate(new AdminPage());
             

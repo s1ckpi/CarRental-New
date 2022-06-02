@@ -1,4 +1,5 @@
 ﻿using CarRental.Models;
+using CarRental.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -80,14 +81,15 @@ namespace CarRental.Views
         private void DeleteButtonClick(object sender, RoutedEventArgs e)
         {
             Button selectedButton = sender as Button;
-            Cars item = selectedButton.DataContext as Cars;
+            Cars item = selectedButton.DataContext as Cars; 
             MessageBoxResult result = MessageBox.Show("Вы действительно хотите удалить строку?", "Удаление", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
-                db.context.Cars.Remove(item);
+                ////db.context.Cars.Remove(item);
                 db.context.SaveChanges();
                 MessageBox.Show("Данные удалены");
             }
+
             //обновление DataGrid
             ListAutomobileListView.ItemsSource = db.context.Cars.ToList();
         }

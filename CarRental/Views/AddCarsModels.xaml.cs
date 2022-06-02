@@ -1,4 +1,5 @@
 ﻿using CarRental.Models;
+using CarRental.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,13 +52,8 @@ namespace CarRental.Views
 
         private void AddCarsModelButtonClick(object sender, RoutedEventArgs e)
         {
-            CarsModels newModel = new CarsModels()
-            {
-                ModelCar = NewCarsModelTextBox.Text,
-                IdBrand = Convert.ToInt32(BrandComboBox.SelectedValue),
-            };
-            db.context.CarsModels.Add(newModel);
-            db.context.SaveChanges();
+            CarsModelsViewModel obj = new CarsModelsViewModel();
+            obj.AddСarModel(Convert.ToInt32(BrandComboBox.SelectedValue), NewCarsModelTextBox.Text);
 
             NavigationService.Navigate(new AdminPage());
         }

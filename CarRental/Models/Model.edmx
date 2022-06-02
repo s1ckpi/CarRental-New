@@ -42,11 +42,11 @@
           <Property Name="Acceleration" Type="float" Nullable="false" />
           <Property Name="MaxSpeed" Type="int" Nullable="false" />
           <Property Name="YearOfIssue" Type="int" Nullable="false" />
-          <Property Name="Image" Type="nvarchar" MaxLength="50" />
-          <Property Name="ImageAbove" Type="nvarchar" MaxLength="50" />
-          <Property Name="IdCarcassType" Type="int" />
-          <Property Name="IdColor" Type="int" />
-          <Property Name="IdModel" Type="int" />
+          <Property Name="Image" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ImageAbove" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdCarcassType" Type="int" Nullable="false" />
+          <Property Name="IdColor" Type="int" Nullable="false" />
+          <Property Name="IdModel" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CarsModels">
           <Key>
@@ -128,7 +128,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Cars_CarcassType">
-          <End Role="CarcassType" Type="Self.CarcassType" Multiplicity="0..1" />
+          <End Role="CarcassType" Type="Self.CarcassType" Multiplicity="1" />
           <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CarcassType">
@@ -140,7 +140,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Cars_CarsModels">
-          <End Role="CarsModels" Type="Self.CarsModels" Multiplicity="0..1" />
+          <End Role="CarsModels" Type="Self.CarsModels" Multiplicity="1" />
           <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CarsModels">
@@ -152,7 +152,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Cars_Color">
-          <End Role="Color" Type="Self.Color" Multiplicity="0..1" />
+          <End Role="Color" Type="Self.Color" Multiplicity="1" />
           <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Color">
@@ -260,11 +260,11 @@
           <Property Name="Acceleration" Type="Double" Nullable="false" />
           <Property Name="MaxSpeed" Type="Int32" Nullable="false" />
           <Property Name="YearOfIssue" Type="Int32" Nullable="false" />
-          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ImageAbove" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IdCarcassType" Type="Int32" />
-          <Property Name="IdColor" Type="Int32" />
-          <Property Name="IdModel" Type="Int32" />
+          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ImageAbove" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdCarcassType" Type="Int32" Nullable="false" />
+          <Property Name="IdColor" Type="Int32" Nullable="false" />
+          <Property Name="IdModel" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BeetwenCarsClients" Relationship="Self.FK_BeetwenCarsClients_Cars" FromRole="Cars" ToRole="BeetwenCarsClients" />
           <NavigationProperty Name="CarcassType" Relationship="Self.FK_Cars_CarcassType" FromRole="Cars" ToRole="CarcassType" />
           <NavigationProperty Name="CarsModels" Relationship="Self.FK_Cars_CarsModels" FromRole="Cars" ToRole="CarsModels" />
@@ -356,7 +356,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Cars_CarcassType">
-          <End Role="CarcassType" Type="Self.CarcassType" Multiplicity="0..1" />
+          <End Role="CarcassType" Type="Self.CarcassType" Multiplicity="1" />
           <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CarcassType">
@@ -368,7 +368,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Cars_CarsModels">
-          <End Role="CarsModels" Type="Self.CarsModels" Multiplicity="0..1" />
+          <End Role="CarsModels" Type="Self.CarsModels" Multiplicity="1" />
           <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CarsModels">
@@ -380,7 +380,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Cars_Color">
-          <End Role="Color" Type="Self.Color" Multiplicity="0..1" />
+          <End Role="Color" Type="Self.Color" Multiplicity="1" />
           <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Color">
