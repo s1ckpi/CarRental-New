@@ -308,6 +308,7 @@
     <Resource Include="Assets\Images\Client.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Assets\Images\icon.png" />
     <Content Include="Models\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:CarRental"
         mc:Ignorable="d"
         Title="CarRental"
+        Icon="/Assets/Images/icon.png"
         Height="1040" Width="1920"
         Background="Transparent" AllowsTransparency="True"
         WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
