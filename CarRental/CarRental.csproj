@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1546FD77-54B8-4DBF-8197-FE83EB5D2767}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarRental</RootNamespace>
+    <AssemblyName>CarRental</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Models\BeetwenCarsClients.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Brand.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CarcassType.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cars.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CarsModels.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClassPartial\Brand.cs" />
+    <Compile Include="Models\ClassPartial\CarModels.cs" />
+    <Compile Include="Models\ClassPartial\Cars.cs" />
+    <Compile Include="Models\ClassPartial\Clients.cs" />
+    <Compile Include="Models\Clients.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Color.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Core.cs" />
+    <Compile Include="Models\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Users.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\UsersViewModel.cs" />
+    <Compile Include="Views\AddBrand.xaml.cs">
+      <DependentUpon>AddBrand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddCarsModels.xaml.cs">
+      <DependentUpon>AddCarsModels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddModel.xaml.cs">
+      <DependentUpon>AddModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminMenu.xaml.cs">
+      <DependentUpon>AdminMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminPage.xaml.cs">
+      <DependentUpon>AdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AuthPage.xaml.cs">
+      <DependentUpon>AuthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AutomobilePage.xaml.cs">
+      <DependentUpon>AutomobilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClientsPage.xaml.cs">
+      <DependentUpon>ClientsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetailsAutomobilePage.xaml.cs">
+      <DependentUpon>DetailsAutomobilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegPage.xaml.cs">
+      <DependentUpon>RegPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Assets\Dictionaries\Dictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\AddBrand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddCarsModels.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AutomobilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ClientsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetailsAutomobilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RegPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Assets\Fonts\NotoSansDisplay-Black.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-BlackItalic.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-Bold.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-BoldItalic.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-ExtraBold.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-ExtraBoldItalic.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-ExtraLight.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-ExtraLightItalic.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-Italic.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-Light.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-LightItalic.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-Medium.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-MediumItalic.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-Regular.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-SemiBold.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-SemiBoldItalic.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-Thin.ttf" />
+    <Resource Include="Assets\Fonts\NotoSansDisplay-ThinItalic.ttf" />
+    <EntityDeploy Include="Models\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\close_active.png" />
+    <Resource Include="Assets\Icons\close_noactive.png" />
+    <Resource Include="Assets\Icons\minimize_active.png" />
+    <Resource Include="Assets\Icons\minimize_noactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\close_fullscreen_active.png" />
+    <Resource Include="Assets\Icons\close_fullscreen_noactive.png" />
+    <Resource Include="Assets\Icons\open_in_full_active.png" />
+    <Resource Include="Assets\Icons\open_in_full_noactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Brand\Aston Martin.png" />
+    <Resource Include="Assets\Images\Brand\Bugatti.png" />
+    <Resource Include="Assets\Images\Brand\Chevrolet Corvette .png" />
+    <Resource Include="Assets\Images\Brand\Koenigsegg.png" />
+    <Resource Include="Assets\Images\Brand\Maserati.png" />
+    <Resource Include="Assets\Images\Brand\McLaren.png" />
+    <Resource Include="Assets\Images\Brand\Porsche.png" />
+    <Resource Include="Assets\Images\Brand\Rolls-royce.png" />
+    <Resource Include="Assets\Images\Car\FrontSide\911 GT3.png" />
+    <Resource Include="Assets\Images\Car\FrontSide\Agera RS.png" />
+    <Resource Include="Assets\Images\Car\FrontSide\Chiron.png" />
+    <Resource Include="Assets\Images\Car\FrontSide\Corvette C8.png" />
+    <Resource Include="Assets\Images\Car\FrontSide\Dawn.png" />
+    <Resource Include="Assets\Images\Car\FrontSide\DB5.png" />
+    <Resource Include="Assets\Images\Car\FrontSide\Ghost.png" />
+    <Resource Include="Assets\Images\Car\FrontSide\MC20.png" />
+    <Resource Include="Assets\Images\Car\FrontSide\P1.png" />
+    <Resource Include="Assets\Images\Car\FrontSide\Taycan Turbo S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Car\AboveSide\911 GT3.png" />
+    <Resource Include="Assets\Images\Car\AboveSide\Agera RS .png" />
+    <Resource Include="Assets\Images\Car\AboveSide\Chiron.png" />
+    <Resource Include="Assets\Images\Car\AboveSide\Corvette C8.png" />
+    <Resource Include="Assets\Images\Car\AboveSide\Dawn.png" />
+    <Resource Include="Assets\Images\Car\AboveSide\DB5.png" />
+    <Resource Include="Assets\Images\Car\AboveSide\Ghost.png" />
+    <Resource Include="Assets\Images\Car\AboveSide\MC20.png" />
+    <Resource Include="Assets\Images\Car\AboveSide\P1.png" />
+    <Resource Include="Assets\Images\Car\AboveSide\Taycan Turbo S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
