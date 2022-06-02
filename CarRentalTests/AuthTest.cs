@@ -19,16 +19,6 @@ namespace CarRentalTests
             //Assert
             Assert.AreEqual(nullstring, expected);
         }
-        [TestMethod]
-        public void String_Empty_FalseReturned()
-        {
-            //Arrange
-            string nullstring = "abcd";
-            string expected = String.Empty;
-            //Act
-            //Assert
-            Assert.AreEqual(expected, nullstring);
-        }
 
         [TestMethod]
         public void Login_Correct_Returned()
