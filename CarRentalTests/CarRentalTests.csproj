@@ -49,13 +49,17 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthTest.cs" />
+    <Compile Include="StringCheckTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CarRentalLibrary\CarRentalLibrary.csproj">
+      <Project>{F02CA0F0-C27D-4A3B-867B-0D8ED5187D2D}</Project>
+      <Name>CarRentalLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CarRental\CarRental.csproj">
       <Project>{1546FD77-54B8-4DBF-8197-FE83EB5D2767}</Project>
       <Name>CarRental</Name>

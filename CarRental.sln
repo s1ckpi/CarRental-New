@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental", "CarRental\CarR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalTests", "CarRentalTests\CarRentalTests.csproj", "{65B0907D-A317-4F94-880F-6D1347FAEDAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalLibrary", "CarRentalLibrary\CarRentalLibrary.csproj", "{F02CA0F0-C27D-4A3B-867B-0D8ED5187D2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{65B0907D-A317-4F94-880F-6D1347FAEDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65B0907D-A317-4F94-880F-6D1347FAEDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65B0907D-A317-4F94-880F-6D1347FAEDAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F02CA0F0-C27D-4A3B-867B-0D8ED5187D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F02CA0F0-C27D-4A3B-867B-0D8ED5187D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F02CA0F0-C27D-4A3B-867B-0D8ED5187D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F02CA0F0-C27D-4A3B-867B-0D8ED5187D2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
