@@ -99,7 +99,8 @@ namespace CarRental.ViewModel
                 FirstName = firstName,
                 LastName = lastName,
                 PatronymicName = patronymicName,
-                Phone = phone
+                Phone = phone,
+                ImageClient = "Client.png"
             };
             if (login == String.Empty || password == String.Empty || email == String.Empty ||driverLicenseNumber == String.Empty ||
                 firstName == String.Empty || lastName == String.Empty || patronymicName == String.Empty || phone == String.Empty)
