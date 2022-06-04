@@ -24,7 +24,7 @@
             <Image Source="{Binding ImageCarPath}" Height="600" Margin="125,0,0,0"/>
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,60,0,0">
                 <TextBlock Text="{Binding CarsModels.Brand.BrandName}" Style="{StaticResource BrandTextBlock}" Foreground="Crimson" FontSize="60" Margin="0,0,0,0"/>
-                <TextBlock Text="{Binding CarsModels.ModelCar}" Foreground="Crimson" FontSize="48" Margin="30,0,0,0"/>
+                <TextBlock Text="{Binding CarsModels.ModelCar}" Foreground="Crimson" FontSize="48" Margin="30,10,0,0"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="0,175,0,0">
@@ -37,7 +37,6 @@
             <StackPanel Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,50" HorizontalAlignment="Center">
                 <TextBlock Text="{Binding Price, StringFormat=' {0} ₽'}" Foreground="Crimson" FontSize="24" Margin="0,0,10,0" HorizontalAlignment="Center"/>
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="(депозит)" Foreground="Crimson" FontSize="14" HorizontalAlignment="Center"/>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
                         <TextBlock Text="С какого числа" Foreground="Crimson" FontSize="14" HorizontalAlignment="Center" Margin="50,20,0,0"/>
                         <TextBlock Text="До какого числа" Foreground="Crimson" FontSize="14" HorizontalAlignment="Center" Margin="110,20,0,0"/>

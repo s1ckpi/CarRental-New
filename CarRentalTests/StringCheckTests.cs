@@ -27,7 +27,7 @@ namespace CarRentalTests
         /// 2. Корректность логина 
         /// </summary>
         [TestMethod]
-        public void LoginCorrect_Correct_Returned()
+        public void Login_Correct_Returned()
         {
             //Arrange
             string Login = "Vasya33";
@@ -43,7 +43,7 @@ namespace CarRentalTests
         /// 3. Некорректность логина 
         /// </summary>
         [TestMethod]
-        public void LoginCorrect_NoCorrect_Returned()
+        public void Login_NoCorrect_Returned()
         {
             //Arrange
             string Login = "_vasya33_";
@@ -59,7 +59,7 @@ namespace CarRentalTests
         /// 4. Корректность пароля 
         /// </summary>
         [TestMethod]
-        public void PasswordCorrect_Correct_Returned()
+        public void Password_Correct_Returned()
         {
             //Arrange
             string password = "Vasya334";
@@ -75,7 +75,7 @@ namespace CarRentalTests
         /// 5. Некорректность пароля 
         /// </summary>
         [TestMethod]
-        public void PasswordCorrect_NoCorrect_Returned()
+        public void Password_NoCorrect_Returned()
         {
             //Arrange
             string password = "vasya33";
@@ -91,7 +91,7 @@ namespace CarRentalTests
         /// 6. Корректность почты
         /// </summary>
         [TestMethod]
-        public void EmailCorrect_Correct_Returned()
+        public void Email_Correct_Returned()
         {
             //Arrange
             string email = "Mihail2@gmail.com";
@@ -107,7 +107,7 @@ namespace CarRentalTests
         /// 7. Некорректность почты
         /// </summary>
         [TestMethod]
-        public void EmailCorrect_NoCorrect_Returned()
+        public void Email_NoCorrect_Returned()
         {
             //Arrange
             string email = "Mihail2@g_mAiL.com";
@@ -123,7 +123,7 @@ namespace CarRentalTests
         /// 8. Корректность телефона
         /// </summary>
         [TestMethod]
-        public void PhoneCorrect_Correct_Returned()
+        public void Phone_Correct_Returned()
         {
             //Arrange
             string phone = "89911129358";
@@ -139,7 +139,7 @@ namespace CarRentalTests
         /// 9. Некорректность телефона
         /// </summary>
         [TestMethod]
-        public void PhoneCorrect_NoCorrect_Returned()
+        public void Phone_NoCorrect_Returned()
         {
             //Arrange
             string phone = "8x012e10t958";

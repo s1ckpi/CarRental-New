@@ -66,7 +66,7 @@
         </Border>
 
 
-        <Button Grid.Row="3" HorizontalAlignment="Right" Name="AddAutomobileButton" Click="AddAutomobileButtonClick" Content="Добавить услугу" Margin="0,0,20,5" Cursor="Hand" Height="30" Width="110"/>
+        <Button Grid.Row="3" HorizontalAlignment="Right" Name="AddAutomobileButton" Click="AddAutomobileButtonClick" Content="Добавить автомобиль" Margin="0,0,20,5" Cursor="Hand" Height="30" Width="150"/>
         <Button Grid.Row="3" HorizontalAlignment="Left" Name="BackButton" Click="BackButtonClick" Content="Назад" Margin="20,0,0,5" Cursor="Hand" Height="30" Width="110"/>
     </Grid>
 </Page>

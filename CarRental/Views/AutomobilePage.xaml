@@ -53,6 +53,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Grid.Row="2" x:Name="BackButton" Content="Назад" HorizontalAlignment="Left" Margin="20,-40,0,0" VerticalAlignment="Top" Click="BackButtonClick"/>
+        <Button Grid.Row="2" x:Name="BackButton" Content="Выход" HorizontalAlignment="Left" Margin="20,-40,0,0" VerticalAlignment="Top" Click="BackButtonClick"/>
     </Grid>
 </Page>

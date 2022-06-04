@@ -52,7 +52,6 @@ namespace CarRental.Views
             BrandComboBox.ItemsSource = arrayBrandCars;
             BrandComboBox.DisplayMemberPath = "BrandName";
             BrandComboBox.SelectedValuePath = "IdBrand";
-            BrandComboBox.SelectedIndex = 0;
 
             arrayModelCars = new List<CarsModels>()
             {
@@ -68,7 +67,6 @@ namespace CarRental.Views
             NewModelComboBox.ItemsSource = arrayModelCars;
             NewModelComboBox.DisplayMemberPath = "ModelCar";
             NewModelComboBox.SelectedValuePath = "IdModel";
-            NewModelComboBox.SelectedIndex = 0;
 
             arrayCarcassCars = new List<CarcassType>()
             {
@@ -84,7 +82,6 @@ namespace CarRental.Views
             CarcassComboBox.ItemsSource = arrayCarcassCars;
             CarcassComboBox.DisplayMemberPath = "CarcassName";
             CarcassComboBox.SelectedValuePath = "IdCarcassType";
-            CarcassComboBox.SelectedIndex = 0;
 
             arrayColorCars = new List<Models.Color>()
             {
@@ -100,7 +97,15 @@ namespace CarRental.Views
             ColorComboBox.ItemsSource = arrayColorCars;
             ColorComboBox.DisplayMemberPath = "ColorName";
             ColorComboBox.SelectedValuePath = "IdColor";
+
+
+
+            BrandComboBox.SelectedIndex = 0;
+            NewModelComboBox.SelectedIndex = 0;
+            CarcassComboBox.SelectedIndex = 0;
             ColorComboBox.SelectedIndex = 0;
+
+
 
             currentCars = activeCar;
             this.db.context = context;
@@ -169,9 +174,9 @@ namespace CarRental.Views
         private void AddModelButtonClick(object sender, RoutedEventArgs e)
         {
             CarsViewModel obj = new CarsViewModel();
-            obj.AddСar(Convert.ToDouble(PriceTextBox.Text), Convert.ToDouble(AccelerationTextBox.Text), Convert.ToInt32(MaxSpeedTextBox.Text), 
-                Convert.ToInt32(YearOfIssueTextBox.Text), ImageAutomobilePath, ImageAboveAutomobilePath, Convert.ToInt32(CarcassComboBox.SelectedValue), 
-                Convert.ToInt32(ColorComboBox.SelectedValue), Convert.ToInt32(NewModelComboBox.SelectedValue));
+            obj.AddСar(Convert.ToDouble(PriceTextBox.Text), Convert.ToDouble(AccelerationTextBox.Text), Convert.ToInt32(MaxSpeedTextBox.Text),
+                       Convert.ToInt32(YearOfIssueTextBox.Text), ImageAutomobilePath, ImageAboveAutomobilePath, Convert.ToInt32(CarcassComboBox.SelectedValue),
+                       Convert.ToInt32(ColorComboBox.SelectedValue), Convert.ToInt32(NewModelComboBox.SelectedValue));
 
             NavigationService.Navigate(new AdminPage());
             

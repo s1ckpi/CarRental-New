@@ -85,7 +85,7 @@ namespace CarRental.Views
             MessageBoxResult result = MessageBox.Show("Вы действительно хотите удалить строку?", "Удаление", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
-                ////db.context.Cars.Remove(item);
+                db.context.Cars.Remove(item);
                 db.context.SaveChanges();
                 MessageBox.Show("Данные удалены");
             }

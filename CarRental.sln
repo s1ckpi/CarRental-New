@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalTests", "CarRental
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalLibrary", "CarRentalLibrary\CarRentalLibrary.csproj", "{F02CA0F0-C27D-4A3B-867B-0D8ED5187D2D}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupProject", "CarRental\SetupProject\SetupProject.vdproj", "{487F3741-A6E2-4324-870A-CA17CF43CD19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{F02CA0F0-C27D-4A3B-867B-0D8ED5187D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F02CA0F0-C27D-4A3B-867B-0D8ED5187D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F02CA0F0-C27D-4A3B-867B-0D8ED5187D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{487F3741-A6E2-4324-870A-CA17CF43CD19}.Debug|Any CPU.ActiveCfg = Debug
+		{487F3741-A6E2-4324-870A-CA17CF43CD19}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
